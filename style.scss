@@ -1,0 +1,30 @@
+---
+--- 
+
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&display=swap');
+
+@import 'variables';
+@import 'mixins';
+@import 'navigation';
+@import 'reset';
+@import 'typography';
+
+
+body {
+  background-color: $bg-color;
+
+  & > .wrapper {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .page-content {
+    background-color: #36393F;
+    border-radius: 9px;
+    width: 100%;
+    max-width: 870px;
+    margin: 50px auto 0 auto;
+    padding: 30px 40px;
+  }
+}
+

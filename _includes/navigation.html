@@ -1,0 +1,28 @@
+<nav class="site-navigation">
+  <div class="main">
+    <a href="{{ site.baseurl }}" class="site-avatar">
+      <img class="img" src="{{ site.avatar }}" alt="{{ site.name }}">
+    </a>
+
+    <div class="site-info">
+      <h2 class="name">
+        <a class="link" href="{{ site.baseurl }}">{{ site.name }}</a>
+      </h2>
+    </div>
+  </div>
+
+  <div class="nav">
+    <ul class="items">
+      {% for item in site.data.nav.pages %}
+        <li class="item{% if item.url == page.url %} -active{% endif %}">
+          <a class="link"
+            href="{{ item.url }}"
+            {% if item.external %}target="_blank"{% endif %}
+          >
+            #{{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
